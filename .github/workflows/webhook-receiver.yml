@@ -1,0 +1,27 @@
+name: Webhook Receiver
+
+on:
+  webhook:
+    types:
+      - jira
+
+jobs:
+  process_webhook:
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Specify the desired Node.js version
+      
+      - name: Install dependencies
+        run: |
+          npm install axios
+      
+      - name: Run API script
+        run: |
+          node api.js
