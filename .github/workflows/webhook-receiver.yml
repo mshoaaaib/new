@@ -1,9 +1,9 @@
 name: Webhook Receiver
 
 on:
-  webhook:
+  issues:
     types:
-      - jira
+      - edited
 
 jobs:
   process_webhook:
