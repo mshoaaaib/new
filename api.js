@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const Ticket_NO= 'SCRUM-9' //To be Set before calling the API
+const Ticket_NO= 'SCRUM-12' //To be Set before calling the API
 
 const url = 'https://testjiragitautomation.atlassian.net/rest/api/3/issue/'+Ticket_NO;
 const auth = {
