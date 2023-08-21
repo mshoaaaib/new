@@ -22,4 +22,8 @@ jobs:
         run: npm install axios
 
       - name: Run api.js
-        run: node api.js
+        run: |
+          TICKET_NUMBER=$INPUT_TICKET_NUMBER  # Get the ticket number from the input
+          node api.js "$TICKET_NUMBER"       # Pass the ticket number as an argument to api.js
+        env:
+          INPUT_TICKET_NUMBER: ${{ github.event.client_payload.ticket_number }}  # Extract the ticket number from the event payload
