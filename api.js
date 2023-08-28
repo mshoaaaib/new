@@ -8,18 +8,18 @@ if (!Ticket_NO) {
   process.exit(1);
 }
 
-const url = 'https://testjiragitautomation.atlassian.net/rest/api/3/issue/' + Ticket_NO;
+const url = 'https://gittest.atlassian.net/rest/api/3/issue/' + Ticket_NO;
 const auth = {
   // JIRA login email
-  username: 'muhammadshoaibajk@gmail.com',
+  username: 'shoaib40ce@gmail.com',
 
   // Token to be copied From JIRA
-  password: 'ATATT3xFfGF0MsZE1cirJxVkX1B0dSskqdEvUJG0ZeV6PQBxzC7sg22e0rEc_jeaasfMAgoy4gkhYYZ0F8blgp2rKPUD8JUBWZtwwAy5Ihf1Iu-ish7zcggpoJFWisf7IFgkmh3-byFlP7YLWQZYFim1SycJ6fERYj7RWwROn3n8N1hTFeenJ5E=CAA656F8' // Replace with your actual API token
+  password: 'ATATT3xFfGF0WfECES2QALJeHN7e_2LCAhkLDlGhZ5ZqN0YHcaWKm9pr__m1XWzfSbnBW_bpsp6SKyfVgsyCszH30rzpjYgNH779eo05QGp5QIN_q0zeOyo6LZlHg1HM2zB5Pn08DoNATpppWm5nBlBP81BZJAVbNBM-O9sfZtZSfH6WYHOemQ8=2DD4759F' // Replace with your actual API token
 };
 
 const requestBody = {
   update: {
-    customfield_10037: [
+    customfield_10044: [
       {
         set: 'Ticket Flagged Successfully'
       }
